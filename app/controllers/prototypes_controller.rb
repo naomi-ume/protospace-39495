@@ -15,7 +15,7 @@ class PrototypesController < ApplicationController
 
   def create
     if Prototype.create(prototype_params)
-    redirect_to '/'
+    redirect_to new_prototype_path(@prototype)
     else 
       render :new
     end
