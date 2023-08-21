@@ -6,7 +6,5 @@ class ApplicationController < ActionController::Base
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:name,:profile,:occupation,:position])
   end
-  def set_url_options
-    ActiveStorage::Current.url_options = Rails.application.config.action_mailer.default_url_options
-  end
+  
 end
